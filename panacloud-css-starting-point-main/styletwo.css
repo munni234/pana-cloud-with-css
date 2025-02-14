@@ -1,0 +1,758 @@
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .menu-toggle {
+      display: flex; /* Show hamburger icon on mobile */
+  }
+  nav {
+    display: none; /* Hide nav links by default on mobile */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute;
+    top: 100%; /* Adjust position based on your design */
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: white; /* Background color */
+    z-index: 10; /* Ensures it is on top */
+  }
+  nav.active {
+    display: flex; /* Show nav links when active */
+  }
+    .navbar {
+      flex-direction: column; /* Stack elements vertically */
+      align-items: flex-start; /* Align items to the left */
+    }
+  
+    .logo img {
+      height: 50px; /* Reduce the size of the logo on mobile */
+    }
+  
+    nav ul {
+      display: none; /* Hide navigation items initially */
+      flex-direction: column; /* Stack navigation items */
+      padding-left: 0; /* Remove padding for mobile */
+      width: 100%; /* Full width */
+      position: absolute; /* Position the menu */
+      top: 60px; /* Adjust according to your navbar height */
+      left: 0; /* Align to the left */
+      background-color: white; /* Background color */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for visibility */
+      z-index: 10; /* Ensure the dropdown is above other elements */
+    }
+  
+    nav.active ul {
+      display: flex; /* Show navigation items when active */
+    }
+  
+    .menu-toggle {
+      cursor: pointer; /* Pointer cursor on hover */
+      margin-left: auto; /* Align toggle to the right */
+    }
+  
+    nav ul li a:hover::after {
+      height: 2px; /* Reduce thickness for mobile screens */
+      background-color: #FFA500; /* Maintain color */
+      width: 35%;
+  }
+  
+  nav ul li {
+      padding: 10px 0; /* Add padding to list items for better touch targets */
+  }
+  }
+  
+  /* Hover effect for the underline */
+  nav ul li a:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px; /* Adjust thickness of the underline */
+    background-color: #FFA500; /* Mustard-orange color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  /* Banner */
+  /* Main Banner Section */
+  .banner {
+    background-size: cover;           /* Ensures the image covers the entire section */
+    background-position: center;      /* Centers the image */
+    background-repeat: no-repeat;     /* Prevents repeating the image */
+    height: 100vh;                     /* Sets the height of the banner section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;                     /* Text color to contrast with the background image */
+    position: relative;
+    transition: background-image 1s ease-in-out; /* Smooth transition between images */
+    padding: 20px;                   /* Add padding to prevent overflow */
+    box-sizing: border-box;          /* Include padding in height calculation */
+  }
+  
+  .banner h1 {
+    font-size: 100px;                /* Large font size for desktops */
+    color: white;
+    margin: 0;                       /* Remove default margin */
+    line-height: 1.1;                /* Adjust line height for better spacing */
+    max-width: 90%;                  /* Limit width to prevent overflow */
+    overflow-wrap: break-word;       /* Ensure long words wrap within the container */
+  }
+  
+  .banner p {
+    font-size: 20px;                 /* Default paragraph font size */
+    padding: 0 20px;                 /* Padding for better text readability */
+    margin: 20px 0;                  /* Add margin for spacing */
+    max-width: 90%;                  /* Limit width to prevent overflow */
+  }
+  
+  /* Dot navigation styles */
+  .dots {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dot:hover,
+  .dot.active {
+    background-color: #717171;
+  }
+  
+  .banner button {
+    padding: 15px 30px; /* Increase button padding */
+    background-color: rgb(241, 163, 54); /* Button background color */
+    color: black; /* Button text color */
+    font-weight: bold;
+    font-size: x-large ;
+    border: none; /* Remove all borders */
+    border-bottom: 4px solid rgb(212, 40, 40); /* Only bottom border in red */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    
+  }
+  
+  /* Responsive Styles */
+ 
+    
+  /* OUR SERVICES */
+  #service-cont{
+      height: auto;
+      width: auto;
+
+  }
+
+  #our-service{
+    text-align: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    padding-top: 10px;
+  }
+.service-heading{
+  font-size: 30px;
+  font-weight: 600;
+  
+}
+ #ser-sec-ser{
+  color: darkgreen;
+  margin-left: 10px;
+ } 
+  
+ #our-service p {
+  padding-left: 300px;
+  padding-right: 300px;
+ }
+#ser-section{
+  display: flex;
+  margin-left: 410px;
+  margin-right: 120px;
+  gap: 40px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+.serv-sec-divs{
+    height: 250px;
+    width: 260px;
+    border: 1px solid rgb(216, 213, 213);
+    opacity: 50;
+   
+    background-color: rgb(226, 223, 223);
+}
+.ser-img{
+  height: 85px;
+  width: 80px;
+   padding-left: 80px;
+}
+.serv-sec-divs h4{
+   font-size: 20px;
+   margin-left: 50px;
+ margin-bottom: 0;
+   padding: 0;
+}
+.serv-sec-divs p{
+  color: rgb(85, 84, 84);
+  margin-top: 4px;
+  margin-left: 20px;
+  margin-right: 9px;
+}
+.serv-sec-divs a {
+  color: darkgreen;
+  margin-left: 30%;
+  text-decoration: underline;
+}
+.green-text{
+  color: darkgreen;
+}
+.black-text1{
+  color: black;
+}
+
+.about-us{
+ 
+  gap: 40px;
+  background-color: rgb(219, 216, 216);
+  padding-top: 10px;
+  padding-left: 60px;
+}
+.Art-board{
+  display: flex;
+  gap: 40px;
+  padding-top: 10px;
+  
+}
+#read-about-sec{
+  height: 50px;
+  width: 200px;
+  background-color: #FFA500;
+  color: black;
+  font-size: 21px;
+  font-weight: 500;
+  border-radius: 3px;
+  border-color: rgb(138, 136, 136);
+}
+/*our advantage */
+#advantage-cont{
+  height: 300px;
+  width: auto;
+
+}
+#portfolio-main-cont{
+  background-color: rgb(29, 28, 28);
+  height: 600px;
+  width: auto;
+  margin-top: 140px;
+  text-align: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+#pFolio-our{
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(252, 246, 246);
+}
+#port-folio{
+  font-size: 30px;
+  font-weight: 700;
+  color:darkgreen;
+  padding-left: 20px;
+}
+#portfolio-para{
+  color: beige;
+  padding-left: 370px;
+  padding-right: 370px;
+  padding-top: 10px;
+}
+#portfolio-category{
+  height: 90px;
+  width: auto;
+  display: flex;
+  margin-right: 500px;
+  margin-left: 500px;
+  gap: 30px;
+  margin-top: 40px;
+}
+.folio-categ{
+  color: aliceblue;
+  font-size: 20px;
+  font-weight: 500;
+}
+#portfolio-logo{
+  color: #FFA500;
+}
+#portfolio-img{
+  height: auto;
+  width: auto;
+ 
+  margin-left: 30vw;
+  margin-right: 20vw;
+}
+#port-img-one{
+  display: flex;
+  height: auto;
+  width: auto;
+}
+#port-img-two{
+  display: flex;
+  height: auto;
+  width: auto;
+}
+#our-advan{
+  text-align: center;
+  justify-content: center;
+  height: auto;
+  width: auto;
+  padding-top: 10px;
+}
+
+#advan-section{
+  display: flex;
+  margin-left: 230px;
+  margin-right: 120px;
+  gap: 40px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  height: auto;
+  width: auto;
+}
+
+.advan-sec-divs{
+  height: 250px;
+  width: 300px;
+  opacity: 50;
+  background-color: rgb(248, 243, 243);
+}
+#advan-cir-img{
+  height: 90px;
+  width: auto;
+  
+
+}
+#advan-cir-img img{
+    height: 150px;
+   padding-left: 50px;
+  padding-bottom: 5px;
+}
+.advan-sec-divs h4{
+  margin-left: 80px;
+  color: rgb(53, 51, 51);
+  font-weight: 800;
+  font-size: 20px;
+}
+.advan-sec-divs p{
+  color: rgb(95, 93, 93);
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 240px;
+   margin-top: 0;
+}
+
+/*responsiveness of advantage section*/
+@media (max-width: 480px) {
+  #advan-section{
+     display: block;
+      margin-left: 70px;
+  }
+  .advan-sec-divs{
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Art-board{
+    display: block;
+  }
+  .about-us{
+    padding-left: 20px;
+  }
+  .Art-board1{
+    font-size: 20px;
+  }
+  #read-about-sec{
+    margin-bottom: 30px;
+  }
+   #art-board img{
+    height: 300px;
+    width: 280px;
+   }
+}
+
+
+
+#about-sec-two{
+  height: auto;
+  width: auto;
+  margin-top: 16px;
+  padding-top: 30px;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(206, 203, 203);
+}
+.about-head-one{
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(15, 15, 15);
+}
+#about-head-two{
+  color: darkgreen;
+  margin-left: 5px;
+
+}
+#sec-abt{
+  background-color: rgb(209, 207, 207);
+  height: auto;
+}
+#about-sec-two p{
+  color: rgb(128, 125, 125);
+  padding-left: 450px;
+  padding-right: 450px;
+}
+.people-about-views{
+  display: flex;
+  margin-left: 300px;
+  height: auto;
+  width: auto;
+}
+#people-v{
+  margin-left: 50px;
+  margin-right: 50px;
+  height: auto;
+  width: auto;
+  padding-left: 130px;
+}
+
+.view-div{
+  display: flex;
+  gap: 20px;
+  height: 120px;
+  width: 500px;
+  padding-bottom: 15px;
+
+}
+#border-class{
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+.margin-top{
+   padding-top: 15px;
+  
+}
+#only-bottom-brd{
+  border-bottom: 1px solid black;
+  border-right: 0;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+/**skill section*/
+#skill-sec{
+  margin-top: 40px;
+  height: auto;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+
+}
+.skill-head{
+  font-size: 30px;
+  font-weight: 700;
+  color: black;
+}
+
+#skill-skill{
+  color: darkgreen;
+  
+}
+#skill-para{
+  color: rgb(133, 130, 130);
+  margin-left: 200px;
+  margin-right: 200px;
+}
+#skill-sec{
+  text-align: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+#skill-sec-div{
+  display: flex;
+  gap: 40px;
+  margin-left: 350px;
+}
+.skill-p p{
+   padding-left: 20px;
+   font-size: 24px;
+   font-weight: 600;
+}
+/*footer section*/
+#footer-cont{
+  height: auto;
+  width: auto;
+  background-color: rgb(111, 177, 6);
+  display: flex;
+  gap: 30px;
+   padding-top: 50px;
+   padding-left: 100px;
+   padding-right: 100px;
+}
+.line{
+  height: 300px;
+  width: 2px;
+  background-color: aliceblue;
+}
+.footer-div{
+  width: 300px;
+  color: aliceblue;
+}
+.footer-div h4{
+  font-size: 24px;
+  font-weight: 600;
+   margin-bottom: 20px;
+ 
+}
+.anchor-link{
+  text-decoration:underline;
+  color: aliceblue;
+  display: block;
+  padding-bottom: 16px;
+}
+.flex{
+  display: flex;
+  
+}
+.img{
+  width: 33px;
+  height: 40px;
+}
+.cont{
+  font-size: 22px;
+  margin-left: 10px;
+  padding-bottom: 10px;
+}
+.size{
+  height: 80px;
+  width: 60px;
+  size: 90px;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 80vh;                  /* Adjust height for smaller screens */
+  }
+
+  .banner h1 {
+    font-size: 50px;               /* Smaller font size for mobile */
+    max-width: 90%;                /* Ensure it does not overflow */
+  }
+
+  .banner p {
+    font-size: 16px;               /* Adjust paragraph size for readability */
+    padding: 0 10px;               /* Less padding for mobile */
+    margin: 10px 0;                /* Adjust margin */
+    max-width: 90%; 
+    text-align: justify;               /* Limit width to prevent overflow */
+  }
+
+  .banner button {
+    padding: 10px 15px;            /* Maintain reasonable button padding */
+    margin-bottom: 20px;           /* Add margin to the bottom to keep it inside the banner */
+  }
+
+  .dots {
+    bottom: 10px;                  /* Adjust dots position */
+  }
+
+  .dot {
+    height: 10px;                  /* Smaller dot size */
+    width: 10px;                   /* Smaller dot size */
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 80vh;                  /* Further adjust height for very small screens */
+  }
+
+  .banner h1 {
+    font-size: 40px;               /* Even smaller font size for very small screens */
+    max-width: 90%;                /* Ensure it does not overflow */
+  }
+
+  .banner p {
+    font-size: 14px;               /* Adjust paragraph size for very small screens */
+    max-width: 90%;
+    text-align: justify;                /* Limit width to prevent overflow */
+  }
+
+  .read-more {
+    padding: 8px 10px;             /* Further reduce button padding */
+    max-width: 80%;                /* Limit button width */
+    width: 100%;                   /* Allow button to fill the container */
+    margin-bottom: 20px;           /* Add margin to the bottom */
+  }
+
+ 
+}
+
+/*footer respon*/
+
+@media (max-width:480px) {
+  #footer-cont{
+    display: block;
+   
+  }
+  .line{
+    display: none;
+  }
+  .flex p{
+    font-size: 18px;
+  }
+  .flex img{
+    height: 30px;
+    width: 27px;
+  }
+  .footer-div h4{
+    font-size: 21px;
+    margin-bottom: 13px;
+  }
+ 
+}
+
+
+/*responsiveness of skill section*/
+@media(max-width:480px) {
+  .skill-head{
+    margin: 0px;
+  }
+ #skill-para{
+  margin-left: 50px;
+margin-right: 50px;
+ }
+ #skill-sec-div{
+  display: block;
+  margin-left: 100px;
+ }
+ .skill-p{
+  font-size: 21px;
+ }
+}
+
+/*responsiveness for people about us*/
+
+
+@media(max-width:480px){
+  #people-v{
+    margin-left: 10px;
+    padding-left: 30px;
+  }
+  .people-about-views{
+    display: block;
+  }
+  #portfolio-category{
+    margin-left: 30px;
+    margin-right: 30px;
+    gap: 5px;
+  }
+}
+@media(max-width:480px){
+   #our-service p {
+    padding-left: 15px;
+    padding-right: 15px;
+   }
+   #ser-section{
+    display: block;
+    margin-left: 85px;
+    margin-right: 20px;
+   }
+   .serv-sec-divs{
+    margin-bottom: 10px;
+   }
+   #portfolio-main-cont{
+    height: auto;
+   }
+   #portfolio-para{
+    padding-left: 10px;
+    padding-right: 10px;
+   }
+   #portfolio-category{
+    gap: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+   }
+   .folio-categ{
+    font-size: 12px;
+   
+    display: flex;
+    flex-shrink: initial;
+   }
+   #portfolio-img{
+    margin-left: 45px;
+   
+   }
+   #port-img-one{
+    display: block;
+    margin-bottom: 10px;
+   }
+
+   #port-img-two{
+    display: block;
+   }
+   #about-sec-two p{
+    padding-left: 10px;
+    padding-right: 10px;
+   }
+   .view-div{
+    margin-left: 0px;
+    height: auto;
+    width: auto;
+   }
+.Art-board2{
+  height: auto;
+  width: auto;
+}
+  
+.Art-board2 img{
+  height: 360px;
+  width: 380px;
+}
+   .people-about-views{
+  
+    margin-left: 0px;
+    
+  }
+  #people-v{
+    margin-left: 0px;
+    padding-left: 1px;
+    margin-right: 0px;
+  }
+  .people-v-one{
+    display: none;
+  }
+  .view-div{
+  gap: 1px;
+}
+
+
+
+
+
+
+
+
+
